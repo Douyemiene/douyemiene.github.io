@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Miene</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#home">Home</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div id="home" class="container">
+    <div class="hero">
+      <div class="hero-photo">
+        <img src="assets/headshot.jpeg" alt="Victor Miene" />
+      </div>
+      <div class="hero-text">
+        <h1>Victor Miene</h1>
+        <p class="affiliation">
+          MSc Engineering Artificial Intelligence
+        </p>
+        <p class="tagline">
+          I work on <strong>Computer Vision &amp; Graphics</strong> —
+          3D reconstruction, neural rendering, and relighting.
+        </p>
+        <div class="links">
+          <a href="mailto:viktormiene.vm@gmail.com">Email</a>
+          <a href="https://github.com/Douyemiene" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Google Scholar</a>
+          <a href="#" target="_blank">Twitter / X</a>
+          <a href="assets/cv.pdf" target="_blank">CV</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        MSc student in Engineering Artificial Intelligence. I work on
+        <strong>3D reconstruction</strong> and <strong>relighting</strong>.
+        Currently an independent researcher at <strong>MLC Africa</strong>;
+        previously a Research Assistant at <strong>Carnegie Mellon University</strong>.
+      </p>
+      <p>Open to research collaborations and PhD opportunities.</p>
+    </section>
+
+    <!-- ── PUBLICATIONS / PROJECTS ── -->
+    <section id="publications">
+      <h2>Projects &amp; Publications</h2>
+
+      <!-- SurfGI-GS -->
+      <div class="pub-entry" id="surfgi-gs">
+        <div class="pub-thumb">
+          <img src="https://mlcollective.org/static/mlc_logo_words.png" alt="MLC Africa" />
+        </div>
+        <div class="pub-info">
+          <p class="pub-title">
+            <a href="#surfgi-gs">
+              SurfGI-GS: Deferred Global Illumination via 2D Gaussian Surfels
+            </a>
+            <span class="badge">In Progress</span>
+          </p>
+          <p class="pub-authors">
+            <strong>Victor Miene</strong>
+          </p>
+          <p class="pub-venue">Technical Report, 2026</p>
+          <p class="pub-desc">
+            We replace the volumetric 3D Gaussian primitives in GI-GS with
+            2D Gaussian surfels (Huang et al. 2024), resolving a fundamental
+            architectural incompatibility between alpha-blended depth/normals
+            and deferred shading's G-buffer contract. Surfels produce analytic
+            per-pixel normals <em>n = t<sub>u</sub> × t<sub>v</sub></em> and
+            first-hit depth, fixing three cascading failures in the original
+            pipeline: G-buffer normal corruption, depth-based position
+            reconstruction error, and AO/indirect illumination degradation.
+          </p>
+          <div class="pub-links">
+            <a href="https://github.com/Douyemiene/surfgi-gs" target="_blank">[Code]</a>
+            <a href="#">[Paper]</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── NEWS ── -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">Mar 2026</span>
+          Started work on <strong>SurfGI-GS</strong>, replacing volumetric
+          Gaussians with 2D surfels in the GI-GS deferred shading pipeline.
+        </li>
+      </ul>
+      <button class="show-more" onclick="toggleNews()">Show more</button>
+      <ul class="news-list hidden" id="news-extra">
+        <li>
+          <span class="news-date">[Date]</span>
+          Started MSc in Engineering Artificial Intelligence.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="https://mlcollective.org/static/mlc_logo_words.png" alt="MLC Africa" />
+        </div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <span class="exp-role">Independent Researcher · MLC Africa</span>
+            <span class="exp-date">Jan 2024 – Present</span>
+          </div>
+          <p class="exp-desc">
+            Investigating surface-aligned 2D Gaussians to produce geometrically consistent
+            Geometry-buffers, improving path-traced visibility and ensuring accurate indirect
+            ray hits for scene relighting.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" alt="CMU" />
+        </div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <span class="exp-role">Graduate Research Assistant · Carnegie Mellon University</span>
+            <span class="exp-date">June 2025 – Aug 2025</span>
+          </div>
+          <p class="exp-meta">Advisor: Prof. Conrad Tucker</p>
+          <p class="exp-topic"><em>Improving Robotic Grasping of Transparent Objects with Neural Radiance Fields</em></p>
+          <p class="exp-desc">
+            Researched and addressed robotic perception challenges with transparent objects
+            by leveraging depth recovery techniques to improve grasp reliability where
+            standard RGB-D sensors fail due to reflection and refraction issues.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TEACHING ── -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" alt="CMU" />
+        </div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <span class="exp-role">Graduate Teaching Assistant · Carnegie Mellon University</span>
+            <span class="exp-date">Jan 2026 – Present</span>
+          </div>
+          <p class="exp-topic"><em>Introduction to Machine Learning for Engineers (18-661)</em></p>
+          <p class="exp-desc">
+            Created instructional code for core ML algorithms (Linear/Logistic Regression,
+            SVMs, Decision Trees, Random Forests &amp; Neural Networks) to bridge theoretical
+            concepts and practical application. Developed and demonstrated Python/PyTorch
+            implementations for recitations on model evaluation, clustering, and dimensionality
+            reduction (PCA).
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png" alt="CMU" />
+        </div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <span class="exp-role">Graduate Teaching Assistant · Carnegie Mellon University</span>
+            <span class="exp-date">Aug 2025 – Dec 2025</span>
+          </div>
+          <p class="exp-topic"><em>Data Inference and Machine Learning (18-785)</em></p>
+          <p class="exp-desc">
+            Supported students in applying data analysis, machine learning, and visualization
+            techniques to solve practical predictive analytics problems.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-logo">
+          <img src="assets/plus-logo.avif" alt="PLUS" />
+        </div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <span class="exp-role">Math Tutor · Personalized Learning Squared (PLUS)</span>
+            <span class="exp-date">Aug 2025 – Dec 2025</span>
+          </div>
+          <p class="exp-desc">
+            Delivered 1:1 virtual math tutoring to middle school students across Pittsburgh, PA,
+            supporting learners from low-income backgrounds through a CMU-developed,
+            research-backed platform. Leveraged the PLUS Toolkit dashboard to identify student
+            knowledge gaps and prioritize targeted, data-driven instructional support.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <p>
+        © 2026 Victor Miene &nbsp;·&nbsp;
+        Last updated: March 2026 &nbsp;·&nbsp;
+        <a href="https://github.com/Douyemiene" target="_blank">Source</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleNews() {
+      const extra = document.getElementById('news-extra');
+      const btn = document.querySelector('.show-more');
+      if (extra.classList.contains('hidden')) {
+        extra.classList.remove('hidden');
+        btn.textContent = 'Show less';
+      } else {
+        extra.classList.add('hidden');
+        btn.textContent = 'Show more';
+      }
+    }
+  </script>
+</body>
+</html>
