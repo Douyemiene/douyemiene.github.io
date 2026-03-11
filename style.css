@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   background: #fff;
   color: #000;
@@ -37,7 +37,8 @@ a:hover { text-decoration: underline; }
 
 .name {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 400;
+  text-align: center;
   margin-bottom: 12px !important;
 }
 
@@ -56,7 +57,7 @@ a:hover { text-decoration: underline; }
 
 .hero-photo {
   width: 100%;
-  max-width: 180px;
+  max-width: 240px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -71,8 +72,6 @@ section {
 section h2 {
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
   margin-bottom: 14px;
 }
 
@@ -174,10 +173,8 @@ section h2 {
   align-items: flex-start;
   margin-bottom: 16px;
   padding-bottom: 14px;
-  border-bottom: 1px dashed #eee;
 }
 
-.exp-entry:last-child { border-bottom: none; }
 
 .exp-logo {
   flex-shrink: 0;
@@ -218,7 +215,6 @@ section h2 {
 
 /* ── Footer ── */
 footer {
-  border-top: 1px solid #ddd;
   padding-top: 12px;
   text-align: center;
   font-size: 12px;
@@ -230,11 +226,55 @@ footer a { color: #aaa; }
 footer a:hover { color: #1772d0; }
 
 /* ── Responsive ── */
-@media (max-width: 560px) {
-  .hero-table, .pub-table { display: block; }
-  .hero-bio, .hero-photo-td, .pub-thumb-td, .pub-text-td {
-    display: block; width: 100%; padding: 8px 0;
+@media (max-width: 600px) {
+  .page { padding: 16px; }
+
+  /* Hero: photo on top, bio below */
+  .hero-table, .hero-table tbody,
+  .hero-table tr { display: block; }
+
+  .hero-photo-td {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px 0 8px;
   }
-  .hero-photo-td { text-align: center; }
-  .pub-thumb-td img { max-width: 160px; margin: 0 auto; }
+
+  .hero-photo { max-width: 160px; }
+
+  .hero-bio {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .name { font-size: 22px; }
+
+  /* Pub: thumb on top */
+  .pub-table, .pub-table tbody,
+  .pub-table tr { display: block; }
+
+  .pub-thumb-td {
+    display: block;
+    width: 100%;
+    padding: 8px 0 4px;
+  }
+
+  .pub-thumb-td img {
+    max-width: 140px;
+    margin: 0 auto;
+  }
+
+  .pub-text-td {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Exp: stack logo + text */
+  .exp-entry { gap: 10px; }
+  .exp-logo  { width: 42px; height: 42px; }
+
+  .exp-header { flex-direction: column; gap: 1px; }
+  .exp-date   { font-size: 11px; }
 }
