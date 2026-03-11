@@ -100,11 +100,7 @@ span.highlight { background-color: #ffffd0; }
   flex-shrink: 0;
 }
 
-.exp-role { font-size: 14px; }
-
-@media (max-width: 600px) {
-  .exp-role { font-size: 16px; }
-}
+.exp-role { font-size: 15px; }
 
 .exp-logo img {
   width: 100%;
