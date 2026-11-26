@@ -42,6 +42,28 @@
   </tbody>
   </table>
 
+  <!-- ── RESEARCH ── -->
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tbody>
+  <tr><td><h2>Research</h2>
+      <p>
+        Web-scale datasets for African languages are built by trusting a language identifier: whatever it labels as a
+        language becomes that language's training data. My research asks when that trust fails and how to fix it,
+        in three steps:
+      </p>
+      <ol>
+        <li><strong>Diagnose.</strong> Show where identifiers fail on real text and why: labels that hold another language,
+            and diacritics (tone marks, under-dotted vowels) that send unrecognised languages to better-resourced neighbours.</li>
+        <li><strong>Measure at scale.</strong> Test every African label against natural text in many languages, together with
+            where each label's training text came from.</li>
+        <li><strong>Fix.</strong> Build identifiers that are robust to how people actually write and that can say
+            “I don't know this language” instead of guessing.</li>
+      </ol>
+      <p>I keep the work low-cost by design: frozen or small models, free GPUs, and openly licensed data checked with native speakers.</p>
+  </td></tr>
+  </tbody>
+  </table>
+
   <!-- ── PROJECTS & PUBLICATIONS ── -->
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tbody>
@@ -66,6 +88,20 @@
         can hold another language, and a correctly labelled class can fail when its training text is marked differently
         from how people write. Where a language is not recognised, tone marks lead identifiers to label its text as
         Yoruba or another better-recognised language that uses the same marks, while placebo marks do not.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="middle">
+      <p>
+        <span class="papertitle">Language Identification That Knows What It Doesn't Know</span>
+        <span class="badge">Current work</span>
+      </p>
+      <p><strong>Victor Miene</strong></p>
+      <p>
+        The next step after diagnosis: a method that makes language identifiers robust to diacritics and lets them flag
+        text from languages they were never trained on, so it is not silently filed under a neighbour's name.
+        Evaluated on natural text in many African languages and on the filters used to build real web corpora.
       </p>
     </td>
   </tr>
